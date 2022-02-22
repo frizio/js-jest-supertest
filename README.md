@@ -13,4 +13,5 @@ npm i express
 ```bash
 npm i -D jest supertest
 npm i -D nodemon
+npm i -D @babel/core @babel/node @babel/cli @babel/preset-env
 ```
