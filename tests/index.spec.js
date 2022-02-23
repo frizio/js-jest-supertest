@@ -16,4 +16,9 @@ describe("GET /tasks", () => {
     expect(response.statusCode).toBe(200);
   });
 
+  test("should respond an array", async () => {
+    const response = await request(app).get("/tasks").send();
+    expect(response.body).toBeInstanceOf(Array);
+  });
+
 })
