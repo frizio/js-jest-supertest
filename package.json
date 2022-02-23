@@ -7,7 +7,8 @@
     "build": "babel src -d dist",
     "start": "babel src -d dist && node dist/index.js",
     "start2": "babel-node src/index.js",
-    "dev": "nodemon src/index.js --exec ./node_modules/.bin/babel-node"
+    "dev": "nodemon src/index.js --exec ./node_modules/.bin/babel-node",
+    "test": "jest ./tests"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,8 @@
     "@babel/core": "^7.17.5",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2"
