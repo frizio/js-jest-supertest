@@ -1,6 +1,7 @@
 # Demo JEST + SUPERTEST
 
 - [Fazt Code Youtube video: Nodejs Testing con Jest y Supertest](https://www.youtube.com/watch?v=MTMcWrDbPA8)
+- [Start Testing Your JavaScript Code with Jest](https://dev.to/ohdylan/start-testing-your-javascript-codes-with-jest-2gfm)
 
 ## Install Dependencies
 
