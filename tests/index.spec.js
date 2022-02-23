@@ -41,6 +41,10 @@ describe("POST /tasks", () => {
     });
     
     // shoud respond with a json object containing the new task with an id
+    test("should respond with a new task ID", async () => {
+      const response = await request(app).post("/tasks").send();
+      expect(response.body.id).toBeDefined();
+    });
 
 });
 
