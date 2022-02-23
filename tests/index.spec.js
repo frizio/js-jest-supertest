@@ -33,6 +33,12 @@ describe("POST /tasks", () => {
     });
     
     // should respond a json as a content type
+    test("should have a Content-Type: application/json header", async () => {
+      const response = await request(app).post("/tasks").send();
+      expect(response.headers["content-type"]).toEqual(
+        expect.stringContaining("json")
+      );
+    });
     
     // shoud respond with a json object containing the new task with an id
 
