@@ -22,3 +22,15 @@ describe("GET /tasks", () => {
   });
 
 })
+
+
+describe("POST /tasks", () => {
+
+    // should respond with a 200 code
+    
+    // should respond a json as a content type
+    
+    // shoud respond with a json object containing the new task with an id
+
+});
+
