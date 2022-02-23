@@ -1,8 +1,13 @@
 import express from "express";
+import { v4 } from "uuid";
 
 const app = express();
 
 const tasks = [];
+
+
+// Middlewares
+app.use(express.json());
 
 
 // Routes
@@ -16,9 +21,10 @@ app.get("/tasks", (req, res) => {
 });
 
 app.post("/tasks", (req, res) => {
-  res.json({});
+  const { title, description } = req.body;
+  const newTask = { id: v4(), title, description };
+  res.json(newTask);
 });
-
 
 
 export default app;

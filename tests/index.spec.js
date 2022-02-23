@@ -26,15 +26,20 @@ describe("GET /tasks", () => {
 
 describe("POST /tasks", () => {
 
+    const newTask = {
+      title: "some title",
+      description: "some description",
+    };
+
     // should respond with a 200 code
     test("should respond with a 200 status code", async () => {
-      const response = await request(app).post("/tasks").send();
+      const response = await request(app).post("/tasks").send(newTask);
       expect(response.statusCode).toBe(200);
     });
     
     // should respond a json as a content type
     test("should have a Content-Type: application/json header", async () => {
-      const response = await request(app).post("/tasks").send();
+      const response = await request(app).post("/tasks").send(newTask);
       expect(response.headers["content-type"]).toEqual(
         expect.stringContaining("json")
       );
@@ -42,7 +47,7 @@ describe("POST /tasks", () => {
     
     // shoud respond with a json object containing the new task with an id
     test("should respond with a new task ID", async () => {
-      const response = await request(app).post("/tasks").send();
+      const response = await request(app).post("/tasks").send(newTask);
       expect(response.body.id).toBeDefined();
     });
 
