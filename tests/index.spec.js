@@ -26,6 +26,8 @@ describe("GET /tasks", () => {
 
 describe("POST /tasks", () => {
 
+  describe("given a title and description", () => {
+
     const newTask = {
       title: "some title",
       description: "some description",
@@ -50,6 +52,11 @@ describe("POST /tasks", () => {
       const response = await request(app).post("/tasks").send(newTask);
       expect(response.body.id).toBeDefined();
     });
+
+  });
+
+
+  
 
 });
 
