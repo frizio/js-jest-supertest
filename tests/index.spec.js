@@ -27,6 +27,10 @@ describe("GET /tasks", () => {
 describe("POST /tasks", () => {
 
     // should respond with a 200 code
+    test("should respond with a 200 status code", async () => {
+      const response = await request(app).post("/tasks").send();
+      expect(response.statusCode).toBe(200);
+    });
     
     // should respond a json as a content type
     
